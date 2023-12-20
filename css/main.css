@@ -1,30 +1,154 @@
-/* Custom CSS Styles to override Bootstrap */
-/* 273E47
-  BD632F
-  D8973C
-  EDE6D1
-  A4243B
-
-  light bg
-  #E9ECEF
-
-  #273e47;
-
-/*
-  ========================================
-  SASS Variables
-  ========================================
-*/
 /*
   ========================================
   Custom styles
   ========================================
 */
 
+/* ESTILO GERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+}
+
+/* ESTILO DO TOPO DO SITE */
+
+section.topo-do-site {
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+section.topo-do-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.topo-do-site h1 {
+  color: #fff;
+  font-size: 42px;
+  line-height: 40px;
+}
+.topo-do-site .txt-topo-site p {
+  color: #fff;
+  margin: 35px 0;
+}
+.topo-do-site .img-topo-site img {
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% {
+      top: 0;
+  }
+  100% {
+      top: 25px;
+  }
+}
+@media screen and (max-width: 1020px) {
+
+  /* CLASSES GERAIS */
+  .flex {
+      flex-direction: column;
+  }
+  .topo-do-site .flex{
+      flex-direction: column-reverse;
+  }
+
+  /* TOPO DO SITE */
+
+  section.topo-do-site .flex {
+      gap: 30px;
+  }
+
+  section.topo-do-site {
+      padding: 10px 5%;
+  }
+
+  .topo-do-site h1 {
+      font-size: 30px;
+  }
+
+  .topo-do-site .img-topo-site img {
+      width: 100%;
+  }
+}
+ /* PLANO DE FUNDO DO SITE */
+#background{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+#background video{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+#background::after{
+  content:  '';
+
+  width: inherit;
+  height: inherit;
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 5%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);}
+
+
+
+/* Texto movimentação  */
+.scrolling-words-container {
+  font-size: 2rem;
+  font-weight: 600; 
+}
+.scrolling-words-box {
+  height: 3rem;
+  margin: auto;
+  overflow: hidden;
+  
+  ul {
+    padding: 0;
+    animation: scrollUp infinite;
+  li {
+      height: 3rem;
+      list-style: none;
+      animation: scrollUp 5s infinite; 
+    }
+  }
+}
+@keyframes scrollUp {
+  25% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}
+.item-container {
+  height: 100px; /* Altura da janela de visualização */
+  overflow: hidden; /* Esconde o conteúdo fora da área de visualização */
+}
+
+
+/* PÁGINA */
 body {
   background-color:#0d001f;
-  color: #273e47;
-  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 16px/22px;
 }
 
 h1,
@@ -37,7 +161,6 @@ p {
 hr{
   border-color: #fcfbfd;
 }
-
 h1 {
   font-size: 36px;
   line-height: 44px;
@@ -85,6 +208,7 @@ NAVBAR
 
 #logo:hover {
   color: #8f00c7;
+  transform: scale(1.05);
 }
 
 /*
@@ -115,6 +239,12 @@ JUMBOTRON
 Card-body
 ==========================
 */
+.card.mb-4.shadow-sm:hover {
+  transform: scale(1.07);
+  box-shadow: 5px 5px 20px #ffffffa2;
+  transition: .2s;
+}
+
 .card-body{
   color: #690083;
   background-color: #080014;
@@ -136,9 +266,6 @@ FOOTER
 CONTAINER
 ===========================
 */
-#Container_a{
-  background-color: #0d001f;
-}
 
 .container .cat-info {
   margin-bottom: 40px;
@@ -158,10 +285,13 @@ BUTTONS
   color: #750080;
   background-color: #000005;
   border-color: #273e47;
+  gap: 20px;
 }
 
 .btn-primary:hover {
   color: #8f00c7;
+  box-shadow: 0px 0px 8px #5200bd;
+  transform: scale(1.20);
 }
 
 .new-nick {
@@ -247,5 +377,4 @@ RESPONSIVE
     min-width: 300px;
   }
 }
-
 /*# sourceMappingURL=main.css.map */

@@ -1,26 +1,62 @@
 /* Custom CSS Styles to override Bootstrap */
-/* 273E47
-  BD632F
-  D8973C
-  EDE6D1
-  A4243B
 
-  light bg
-  #E9ECEF
-
-  #273e47;
-  ##160000 red Background color
-
-/*
-  ========================================
-  SASS Variables
-  ========================================
-*/
 /*
   ========================================
   Custom styles
   ========================================
 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+ /* PLANO DE FUNDO DO SITE */
+
+
+ #background{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+#background video{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+#background::after{
+  content:  '';
+
+  width: inherit;
+  height: inherit;
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(109deg, rgba(10, 12, 16, 0.65) 5%, rgba(10, 12, 16, 0.65) 50%, rgba(10, 12, 16, 0.7) 85%);}
+
+
+/* ESTILO DO TOPO DO SITE */
+
+section.topo-do-site {
+  padding-top: 100px;
+  padding-bottom: 0px;
+}
+section.topo-do-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.topo-do-site h1 {
+  color: #fff;
+  font-size: 42px;
+  line-height: 40px;
+}
+.topo-do-site .txt-topo-site p {
+  color: #fff;
+  margin: 35px 0;
+}
 
 body {
   background-color:#080000;
@@ -117,6 +153,13 @@ JUMBOTRON
 Card-body
 ==========================
 */
+
+.card.mb-4.shadow-sm:hover {
+  transform: scale(1.07);
+  box-shadow: 5px 5px 20px #ffffffa2;
+  transition: .2s;
+}
+
 .card-body{
   color: #850000;
   background-color: #160000;
@@ -139,12 +182,6 @@ CONTAINER
 ===========================
 */
 
-
-
-#Container_a{
-  background-color: #080000;
-  margin-bottom: 10px;
-}
 .container{
   margin-bottom: 5px;
 
@@ -172,6 +209,8 @@ BUTTONS
 
 .btn-primary:hover {
   color: #ee1414;
+  box-shadow: 0px 0px 8px #b60000;
+  transform: scale(1.15);
 }
 
 .new-nick {

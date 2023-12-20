@@ -1,55 +1,186 @@
-/* Custom CSS Styles to override Bootstrap */
-
-/* 273E47
-  BD632F
-  D8973C
-  EDE6D1
-  A4243B
-
-  light bg
-  #E9ECEF
-
-
-/*
-  ========================================
-  SASS Variables
-  ========================================
-*/
-$primary-col: #273e47;
-$background-col: #e9ecef;
-$highlight-col: #dfa95f;
-$highlight-hov: #ede6d1;
-
 /*
   ========================================
   Custom styles
   ========================================
 */
+
+
+
+
+
+
+
+
+
+
+
+/* ESTILO GERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+}
+
+/* ESTILO DO TOPO DO SITE */
+
+section.topo-do-site {
+  padding: 60px 0%;
+}
+section.topo-do-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.topo-do-site h1 {
+  color: #fff;
+  font-size: 42px;
+  line-height: 40px;
+}
+.topo-do-site .txt-topo-site p {
+  color: #fff;
+  margin: 35px 0;
+}
+.topo-do-site .img-topo-site img {
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% {
+      top: 0;
+  }
+  100% {
+      top: 25px;
+  }
+}
+@media screen and (max-width: 1020px) {
+
+  /* CLASSES GERAIS */
+  .flex {
+      flex-direction: column;
+  }
+  .topo-do-site .flex{
+      flex-direction: column-reverse;
+  }
+
+  /* TOPO DO SITE */
+
+  section.topo-do-site .flex {
+      gap: 30px;
+  }
+
+  section.topo-do-site {
+      padding: 10px 5%;
+  }
+
+  .topo-do-site h1 {
+      font-size: 30px;
+  }
+
+  .topo-do-site .img-topo-site img {
+      width: 100%;
+  }
+}
+ /* PLANO DE FUNDO DO SITE */
+#background{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+#background video{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+#background::after{
+  content:  '';
+
+  width: inherit;
+  height: inherit;
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 5%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);}
+
+/* Texto movimentação  */
+
+.scrolling-words-container {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600; 
+}
+
+.scrolling-words-box {
+  height: 3rem;
+  margin: auto;
+  overflow: hidden;
+  
+  ul {
+    margin: 0 0.625rem;
+    padding: 0;
+    animation: scrollUp 4s infinite;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 3rem;
+      list-style: none; 
+    }
+  }
+}
+
+$item-count: 5;
+
+$item-count: 5;
+@keyframes scrollUp {
+  @for $i from 1 through ($item-count - 1) {
+    #{($i * 25) - 10%}, #{$i * 25%} {
+      transform: translateY((-100% / $item-count) * $i);
+    }
+  }
+}
+
+
 body {
-  background-color: $background-col;
-  color: $primary-col;
-  font: 300 16px/22px 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Arial,
-    sans-serif;
+  background-color:#0d001f;
+  font: 300 16px/22px;
 }
 
 h1,
 h2,
 h3,
-h4 {
-  color: $primary-col;
+h4,
+p {
+  color: #fcfbfd;
 }
-
+hr{
+  border-color: #fcfbfd;
+}
 h1 {
   font-size: 36px;
   line-height: 44px;
 }
+
 h2 {
   font-size: 28px;
   line-height: 44px;
 }
+
 h3 {
   font-size: 21px;
 }
+
 h4 {
   font-size: 18px;
 }
@@ -64,7 +195,7 @@ em {
 }
 
 .text-muted {
-  color: $primary-col;
+  color: #273e47;
 }
 
 /*
@@ -72,18 +203,18 @@ em {
 NAVBAR
 ==========================
 */
-
 #navbar {
   font-weight: 400;
-  background-color: $primary-col;
+  background-color: #000000;
 }
 
 #logo {
-  color: $highlight-col;
+  color: #750080;
 }
 
 #logo:hover {
-  color: $highlight-hov;
+  color: #8f00c7;
+  transform: scale(1.05);
 }
 
 /*
@@ -91,15 +222,14 @@ NAVBAR
 JUMBOTRON
 ==========================
 */
-
 .jumbotron {
   padding-bottom: 0;
-  margin-top: 20px;
-
-  .lead {
-    font-size: 18px;
-  }
+  margin-top: 15px;
 }
+.jumbotron .lead {
+  font-size: 18px;
+}
+
 
 .cat-img {
   display: block;
@@ -108,18 +238,27 @@ JUMBOTRON
   border-radius: 20px;
   margin: auto;
   margin-bottom: 20px;
-  border: 1px gray solid;
+  border: 1px rgb(124, 124, 124) solid;
 }
+/*
+==========================
+Card-body
+==========================
+*/
+.card-body{
+  color: #690083;
+  background-color: #080014;
+}
+
 
 /*
 ==========================
 FOOTER
 ==========================
 */
-
 #footer {
-  color: $highlight-col;
-  background-color: $primary-col;
+  color: #fbfbfc;
+  background-color: #080014;
 }
 
 /*
@@ -127,8 +266,14 @@ FOOTER
 CONTAINER
 ===========================
 */
+
 .container .cat-info {
   margin-bottom: 40px;
+}
+
+#main_blocks{
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 /*
@@ -136,16 +281,17 @@ CONTAINER
 BUTTONS
 ===========================
 */
-
-.btn-primary {
-  color: $highlight-col;
-  background-color: $primary-col;
-  border-color: $primary-col;
+.btn-primary, .btn-primary:hover {
+  color: #750080;
+  background-color: #000005;
+  border-color: #273e47;
+  gap: 20px;
 }
 
 .btn-primary:hover {
-  @extend .btn-primary;
-  color: $highlight-hov;
+  color: #8f00c7;
+  box-shadow: 0px 0px 8px #5200bd;
+  transform: scale(1.20);
 }
 
 .new-nick {
@@ -157,7 +303,6 @@ BUTTONS
 TABLES
 ==========================
 */
-
 table.table {
   margin-bottom: 5px;
 }
@@ -173,7 +318,6 @@ td {
 BLOG
 ==========================
 */
-
 .blog-main {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -200,7 +344,6 @@ table + p {
 PROJECTS
 ==========================
 */
-
 p.tech-icons {
   padding: 0;
   margin: 0;
@@ -223,16 +366,16 @@ p.tech-icons {
 RESPONSIVE
 =============================
 */
-
 @media print {
   .nickname-gen {
     display: none;
   }
 }
-
 @media only screen and (max-width: 400px) {
   .blog-post img.blog-img.center {
     max-width: 90vw;
     min-width: 300px;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
