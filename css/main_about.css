@@ -149,7 +149,7 @@ Card-body
 ==========================
 */
 .card.mb-4.shadow-sm:hover {
-  transform: scale(1.07);
+  transform: scale(1.05);
   box-shadow: 5px 5px 20px #ffffffa2;
   transition: .2s;
 }
@@ -202,7 +202,7 @@ BUTTONS
 .btn-primary:hover {
   color: #1422ee;
   box-shadow: 0px 0px 8px #2900bd;
-  transform: scale(1.20);
+  transform: scale(1.10);
 }
 
 .new-nick {

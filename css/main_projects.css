@@ -155,7 +155,7 @@ Card-body
 */
 
 .card.mb-4.shadow-sm:hover {
-  transform: scale(1.07);
+  transform: scale(1.05);
   box-shadow: 5px 5px 20px #ffffffa2;
   transition: .2s;
 }
