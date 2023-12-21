@@ -97,16 +97,26 @@
     <!--Main Page Content-->
 
     <main role="main">
-      <section class="jumbotron text-left" id = "Container_a">
+
+      <div id = "background">
+        <video loop autoplay muted>
+            <source src = "videos/4.mp4" tyoe = "video/mp4">
+        </video>
+      </div>
+
+
+      <section class="topo-do-site">
         <div class="container">
           <h1>Studies</h1>
           <p class="lead">
             Here are some of the courses I have completed during my life.
           </p>
           <p>
-            <a id="javascript" href="index.html" class="btn btn-primary my-2"
-              >Back to Home</a
-            >
+              <a href="#courses" class="btn btn-primary my-2">Courses</a>
+              <a href="#Studies" class="btn btn-primary my-2">Studies</a>
+              <a href="#University" class="btn btn-primary my-2">University</a>
+              <a href="#challenges" class="btn btn-primary my-2">Challenges</a>
+
           </p>
         </div>
       </section>
@@ -115,73 +125,43 @@
         <!-- Front End Libs Projects -->
         <div class="container">
           <h2>Courses</h2>
-          <hr/>
+          <hr id="courses"/>
 
           <h3>Artificial Inteligence</h3>
-          <div class="row">
-            
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-              <div class="card mb-4 shadow-sm">
-                <img
-                  src="assets/Projects/add.png"
-                  class="card-img-top"
-                  alt="Model"
-                />
-                <div class="card-body">
-                  <h3 class="card-title">Model example</h3>
-                  <p class="card-text">
-                    Write the description of the course here!
-                  </p>
-                  <p class="tech-icons">
-                    <i class="fab fa-js-square" title="JavaScript"></i>
-                    <i class="fab fa-react" title="React"></i>
-                    <i class="fab fa-bootstrap" title="Bootstrap"></i>
-                    <i class="fab fa-css3-alt" title="CSS3"></i>
-                    <img
-                      src="assets/Icons/create-react-app.png"
-                      title="Create-React-App"
-                      alt="Create-React-App Logo"
-                    />
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  ></div>
-                  <div class="btn-group">
-                    <a
-                      href=""
-                      class="btn btn-primary my-2"
-                      >Live Site</a
-                    >
-                  </div>
-                  <div class="btn-group">
-                    <a
-                      href=""
-                      class="btn btn-primary my-2"
-                      ><i class="fab fa-github"></i> Source Code
-                    </a>
+         
+          <div class="row no-gutters">
+
+            <div class="card mb-4 shadow-sm" style="width: 100%";>
+              <div class="row no-gutters">
+
+                  <img src="assets/studies/CS50AI.jpeg" class="card-img" alt="cs50ai"
+                  style="width: 27%; height: 100%;">
+
+                <div class="col-lg col-sm">
+                  <div class="card-body" style="width: 100%;">
+                    
+                    <h3 class="card-title">Harvard CS50AI</h3>
+                    <p class="card-text">
+                      This course explores the concepts and algorithms at the foundation of modern artificial intelligence, diving into the ideas that give rise to technologies like game-playing engines, handwriting recognition, and machine translation. Through hands-on projects, students gain exposure to the theory behind graph search algorithms, classification, optimization, machine learning, large language models, and other topics in artificial intelligence as they incorporate them into their own Python programs.
+                    </p>
+
+                    <div class="btn-group">
+                      <a href="https://drive.google.com/file/d/1qL21HFQTkow648mkY0rI7tWRqfuurDqX/view?usp=sharing" class="btn btn-primary my-2" target="_blank">Certificate</a>
+                    </div>
+                    <div class="btn-group">
+                      <a href="https://github.com/Matias-Lima/CS50_AI_Projects.git" class="btn btn-primary my-2" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <hr/>
-
-          <!-- Data Visualisation Projects -->
-          <h3>Subárea</h3>
-          <div class="row">
-
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-            
-            </div>
-
-          </div>
+          <!-- Add Course -->
 
           <hr/>
-          <!-- Back End Development Projects -->
           <h3>Add</h3>
           <div class="row">
-            
-
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
               
             </div>
@@ -190,23 +170,19 @@
 
           <hr />
           <!-- QA Projects -->
-          <h3>Add</h3>
-          <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12"></div>
+         
 
-            </div>
-            
-          </div>
+
         </div>
 
-        <hr id="python" style="margin-bottom: 50px" />
+        <hr id="Studies" style="margin-bottom: 50px"/>
         <br />
         <!-- Python Projects -->
         <div class="container">
-          <h2>Search</h2>
+          <h2>Studies</h2>
           <hr/>
 
-          <h3>Add</h3>
+          <h3>Search</h3>
           <div class="row">
             
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
@@ -217,16 +193,14 @@
 
 
 
-          <hr />
-          <h3>Add</h3>
+          <hr/>
+          <h3>Extension</h3>
           <div class="row">
-            
+
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-              
             </div>
 
           </div>
-
 
 
         </div>
@@ -241,12 +215,13 @@
           <h3>Econometria II</h3>
           <div class="row">
             
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-9">
               <div class="card mb-4 shadow-sm">
                 <img
                   src="assets/studies/university_monitoria.png"
                   class="card-img-top"
                   alt="Model"
+                  style="width: 100%; height: 180px";
                 />
                 <div class="card-body">
                   <h3 class="card-title">Monitoria</h3>
@@ -259,7 +234,7 @@
                   <div class="btn-group">
                     <a
                       href="https://github.com/Matias-Lima/Econometria-II.git"
-                      class="btn btn-primary my-2"
+                      class="btn btn-primary my-2" target ="_blank"
                       ><i class="fab fa-github"></i> Source Code
                     </a>
                   </div>
@@ -267,12 +242,13 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-9">
               <div class="card mb-4 shadow-sm">
                 <img
                   src="assets/studies/university_dados_painel.png"
                   class="card-img-top"
                   alt="Model"
+                  style="width: 100%; height: 180px";
                 />
                 <div class="card-body">
                   <h3 class="card-title">Dados em Painel</h3>
@@ -286,23 +262,74 @@
                   <div class="btn-group">
                     <a
                       href="https://www.canva.com/design/DAFzgbmWj1k/Vmmu5_DO02FupvNkSN0_ag/view?utm_content=DAFzgbmWj1k&utm_campaign=designshare&utm_medium=link&utm_source=editor"
-                      class="btn btn-primary my-2"
+                      class="btn btn-primary my-2" target ="_blank"
                       ><i class="fab fa-github"></i> Apresentação
                     </a>
                   </div>
                 </div>
               </div>
-
             </div>
-
-
-
 
             
           </div>
 
           <hr />
+          <h3>Add</h3>
+          <div class="row">
+            
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              
+            </div>
+          </div>
 
+
+        </div>
+
+        <!-- challenges -->
+        <hr id="challenges" style="margin-bottom: 50px" />
+        <br />
+        <div class="container">
+          <h2>Challenges</h2>
+          <hr/>
+
+          <div class="row no-gutters">
+
+            <div class="card mb-4 shadow-sm" style="width: 100%";>
+              <div class="row no-gutters">
+                  <img src="assets/studies/Challenges_datathon.jpg" class="card-img" alt="Model"
+                  style="width: 19%; height: 100%;">
+
+                <div class="col-lg col-sm">
+                  <div class="card-body" style="width: 100%;">
+
+                    <h3 class="card-title">Datathon 2023</h3>
+                    <p class="card-text">
+                      Competição realizada pela FGV. Tema do projeto: "Previsibilidade do Prêmio pelo Risco de Criptomoedas com Indicadores Técnicos: Uma Abordagem em Níveis de Sentimento de Mercado."
+                    </p>
+
+                    <p class="tech-icons">
+                      <img src="assets/Icons/web_s.svg" alt="Web Scraping Logo" />
+                      <img src="assets/Icons/usp.png" alt="USP Logo" />
+                      <img src="assets/Icons/python.png"  alt="Python Logo" />
+                      <img src="assets/Icons/huggingface.svg" alt="huggingface Logo" />
+                      <img src="assets/Icons/fea.png" alt="Fea Logo" />
+                    </p>
+
+                    <div class="btn-group">
+                      <a href="https://portaldobitcoin.uol.com.br/fgv-revela-vencedores-do-datathon-de-moedas-digitais-conheca-os-projetos/ " class="btn btn-primary my-2" target ="_blank">Reportagem UOL</a>
+                    </div>
+                    <div class="btn-group">
+                      <a href="https://eesp.fgv.br/evento/4o-desafio-de-dados-datathon-de-moedas-digitais-fgv-eesp" class="btn btn-primary my-2"><i class="fab fa-google" target ="_blank"></i> Informações</a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <hr />
           <h3>Add</h3>
           <div class="row">
             
@@ -312,14 +339,14 @@
 
            
           </div>
+
+
         </div>
 
 
 
 
 
-
-        <hr id="python" style="margin-bottom: 50px" />
       </div>
     </main>
 
