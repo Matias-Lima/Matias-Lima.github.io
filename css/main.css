@@ -156,11 +156,14 @@ h2,
 h3,
 h4,
 p {
-  color: #fcfbfd;
+  color: #e0e0e0e3; /* Cor do texto cinza claro */
+  font-family: Arial, sans-serif; /* Fonte sans-serif */
+  font-weight: 505;
 }
 hr{
-  border-color: #fcfbfd;
+  border-color: #fcfbfd63;
 }
+
 h1 {
   font-size: 36px;
   line-height: 44px;
@@ -239,6 +242,12 @@ JUMBOTRON
 Card-body
 ==========================
 */
+
+.card{
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 0px;
+}
 .card.mb-4.shadow-sm:hover {
   transform: scale(1.05);
   box-shadow: 5px 5px 20px #ffffffa2;

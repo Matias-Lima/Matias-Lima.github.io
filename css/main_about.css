@@ -67,13 +67,14 @@ h2,
 h3,
 h4,
 p {
-  color: #fcfbfd;
-  
+  color: #e0e0e0e3; /* Cor do texto cinza claro */
+  font-family: Arial, sans-serif; /* Fonte sans-serif */
+  font-weight: 505;
+  line-height: 1.3; 
 }
 
-h1 {
-  font-size: 36px;
-  line-height: 44px;
+hr{
+  border-color: #fcfbfd63;
 }
 
 h2 {
@@ -148,6 +149,12 @@ JUMBOTRON
 Card-body
 ==========================
 */
+.card{
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 0px;
+}
+
 .card.mb-4.shadow-sm:hover {
   transform: scale(1.05);
   box-shadow: 5px 5px 20px #ffffffa2;
@@ -155,7 +162,7 @@ Card-body
 }
 
 .card-body{
-  color: #000283;
+  color: #00013bb6;
   background-color: #080014;
 }
 
