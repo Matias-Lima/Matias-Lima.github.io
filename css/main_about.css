@@ -1,0 +1,299 @@
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* PLANO DE FUNDO DO SITE */
+
+#background{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+#background video{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+#background::after{
+  content:  '';
+
+  width: inherit;
+  height: inherit;
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(109deg, rgba(10, 12, 16, 0.65) 5%, rgba(10, 12, 16, 0.65) 50%, rgba(10, 12, 16, 0.7) 85%);}
+
+ /* ESTILO DO TOPO DO SITE */
+
+section.topo-do-site {
+  padding-top: 100px;
+  padding-bottom: 0px;
+}
+section.topo-do-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.topo-do-site h1 {
+  color: #fff;
+  font-size: 42px;
+  line-height: 40px;
+}
+.topo-do-site .txt-topo-site p {
+  color: #fff;
+  margin: 35px 0;
+}
+ 
+
+body {
+  background-color:#050022;
+  color: #273e47;
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: #e0e0e0e3; /* Cor do texto cinza claro */
+  font-family: Arial, sans-serif; /* Fonte sans-serif */
+  font-weight: 505;
+  line-height: 1.3; 
+}
+
+hr{
+  border-color: #fcfbfd63;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 44px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+strong {
+  font-weight: 400;
+}
+
+cite,
+em {
+  font-style: italic;
+}
+
+.text-muted {
+  color: #273e47;
+}
+
+/*
+==========================
+NAVBAR
+==========================
+*/
+#navbar {
+  font-weight: 400;
+  background-color: #000000;
+}
+
+#logo {
+  color: #170080;
+}
+
+#logo:hover {
+  color: #1e00c7;
+}
+
+/*
+==========================
+JUMBOTRON
+==========================
+*/
+.jumbotron {
+  padding-bottom: 0;
+  margin-top: 15px;
+}
+.jumbotron .lead {
+  font-size: 18px;
+}
+
+
+.cat-img {
+  display: block;
+  max-width: 720px;
+  width: 100%;
+  border-radius: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 1px gray solid;
+}
+/*
+==========================
+Card-body
+==========================
+*/
+.card{
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 0px;
+}
+
+.card.mb-4.shadow-sm:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 20px #ffffffa2;
+  transition: .2s;
+}
+
+.card-body{
+  color: #00013bb6;
+  background-color: #080014;
+}
+
+
+/*
+==========================
+FOOTER
+==========================
+*/
+#footer {
+  color: #fbfbfc;
+  background-color: #080014;
+}
+
+/*
+===========================
+CONTAINER
+===========================
+*/
+#Container_a{
+  background-color: #050022;
+}
+
+.container .cat-info {
+  margin-bottom: 40px;
+}
+
+#main_blocks{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/*
+===========================
+BUTTONS
+===========================
+*/
+.btn-primary, .btn-primary:hover {
+  color: #0015d3;
+  background-color: #000005;
+  border-color: #273e47;
+}
+
+.btn-primary:hover {
+  color: #1422ee;
+  box-shadow: 0px 0px 8px #2900bd;
+  transform: scale(1.10);
+}
+
+.new-nick {
+  margin-bottom: 20px;
+}
+
+/*
+==========================
+TABLES
+==========================
+*/
+table.table {
+  margin-bottom: 5px;
+}
+
+th,
+td {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+/*
+==========================
+BLOG
+==========================
+*/
+.blog-main {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* Inherit from cat img */
+.blog-post img.blog-img.center {
+  display: block;
+  max-height: 300px;
+  max-width: 100%;
+  margin: auto;
+  border: 1px gray solid;
+}
+
+img.blog-img + p,
+table + p {
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/*
+==========================
+PROJECTS
+==========================
+*/
+p.tech-icons {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.tech-icons img {
+  display: inline-block;
+  max-height: 28px;
+  padding-bottom: 6px;
+}
+
+.tech-icons img.larger {
+  max-height: 30px;
+}
+
+/*
+=============================
+RESPONSIVE
+=============================
+*/
+@media print {
+  .nickname-gen {
+    display: none;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .blog-post img.blog-img.center {
+    max-width: 90vw;
+    min-width: 300px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
