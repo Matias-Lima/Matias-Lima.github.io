@@ -1,208 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <!--Bootstrap, StyleSheets and Fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link rel="stylesheet" href="css/main.css">
-      <!-- Favicons -->
-      <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-      <link rel="manifest" href="assets/favicons/site.webmanifest">
-      <!-- Page Title -->
-      <title>Matias's Homepage</title>
-    </head>
-    <body>
-      
-      <div class="glowing">    
-        <span style="--i:1;"></span><span style="--i:2;"></span><span style="--i:3;"></span>       
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Matias Lima — Economics × Data × AI</title>
+  <meta name="description" content="Matias Lima is an economist and AI engineer building tools, research and products at the intersection of economics, data and artificial intelligence.">
+  <meta name="theme-color" content="#080808">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Matias Lima — Economics × Data × AI">
+  <meta property="og:description" content="Economist and AI engineer building tools, research and products at the intersection of economics, data and artificial intelligence.">
+  <meta property="og:image" content="https://matias-lima.github.io/images/hero-portrait.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="image" href="images/hero-bg.jpg">
+  <link rel="preload" as="image" href="images/hero-mask.png">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicons/site.webmanifest">
+</head>
+<body data-page="home">
+
+  <!-- icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+    <symbol id="i-sort" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9h4v12H3zM10 9h3.8v1.7c.6-1 1.9-2 3.8-2 4 0 4.4 2.6 4.4 6V21h-4v-5.3c0-1.3 0-3-1.8-3s-2.2 1.4-2.2 2.9V21h-4z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.4-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.2-.4-1.2.1-2.6 0 0 .8-.3 2.8 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.6.7.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-bars" viewBox="0 0 24 24"><path d="M5 20v-8M12 20V6M19 20v-10"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M14 7h7v7"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></symbol>
+    <symbol id="i-ai" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><circle cx="4" cy="6" r="1.5"/><circle cx="20" cy="6" r="1.5"/><circle cx="4" cy="18" r="1.5"/><circle cx="20" cy="18" r="1.5"/><path d="M5.3 7l4.6 3.6M18.7 7l-4.6 3.6M5.3 17l4.6-3.6M18.7 17l-4.6-3.6"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.6-4.6A8 8 0 1 1 21 12z"/></symbol>
+  </svg>
+
+  <!-- ===== navigation ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Matias Lima — home">ML</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#home" class="is-active">Home</a>
+        <a href="#studies">Studies</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <span class="vline"></span>
+        <a class="btn btn--sm" href="#contact">Let's talk <span class="arrow"><svg class="ico"><use href="#i-right"/></svg></span></a>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
       </div>
-      <div class="glowing">      
-        <span style="--i:1;"></span><span style="--i:2;"></span><span style="--i:3;"></span>       
-      </div>     
-      <div class="glowing">       
-        <span style="--i:1;"></span><span style="--i:2;"></span><span style="--i:3;"></span>
-      </div>
-      <div class="glowing">
-        <span style="--i:1;"></span><span style="--i:2;"></span><span style="--i:3;"></span>    
+    </div>
+  </header>
+  <div class="menu" id="menu">
+    <a href="#home">Home</a>
+    <a href="#studies">Studies</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a class="btn menu-cta" href="mailto:matiaslima@usp.br">Let's talk <span class="arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
+  </div>
+
+  <main>
+    <!-- ===== hero ===== -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-geo" aria-hidden="true">
+        <svg viewBox="0 0 600 600" fill="none" stroke="#C58B47">
+          <g stroke-opacity=".12"><path d="M100 0v600M300 0v600M500 0v600M0 100h600M0 300h600M0 500h600"/></g>
+          <circle cx="330" cy="290" r="170" stroke-opacity=".5"/>
+          <circle cx="330" cy="290" r="240" stroke-opacity=".22"/>
+          <circle cx="400" cy="250" r="120" stroke-opacity=".32"/>
+          <path d="M160 290h340" stroke-opacity=".3"/>
+        </svg>
       </div>
 
-      <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navbar">
-          <a class="navbar-brand" id="logo" href="index.html">Matias Lima</a>
-          <!--Navbar buttons-->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="studies.html">Studies</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>   
-              <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://github.com/Matias-Lima"  target="_blank"><i class="fa fa-github"></i>Github</a>
-              </li>
-              <li class="nav-item" id="test">
-                <a class="nav-link" href="https://www.linkedin.com/in/matias-lima-4a667328a"  target="_blank"><i class="fa fa-linkedin"> </i> LinkedIn</a>
-              </li>
-            </ul>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow reveal">Economics · AI · Data · Technology</span>
+          <h1 class="reveal" data-delay="1">I build intelligent systems that connect <em class="gold">economics, data, and AI.</em></h1>
+          <div class="rule reveal" data-delay="2"></div>
+          <p class="hero-text reveal" data-delay="2">Economist and AI engineer. I build tools, research and products that turn data into clear decisions and real-world impact — from fixed income and markets to LLM-powered systems.</p>
+          <div class="contacts reveal" data-delay="3">
+            <a href="mailto:matiaslima@usp.br"><svg class="ico"><use href="#i-mail"/></svg><span>matiaslima@usp.br</span></a>
+            <span class="sep"></span>
+            <a href="https://www.linkedin.com/in/matias-lima-4a667328a" target="_blank" rel="noopener"><svg class="ico"><use href="#i-linkedin"/></svg><span>LinkedIn</span></a>
+            <span class="sep"></span>
+            <a href="https://github.com/Matias-Lima" target="_blank" rel="noopener"><svg class="ico"><use href="#i-github"/></svg><span>GitHub</span></a>
           </div>
-        </nav>
-      </header>
-
-      <!--Main Page Content-->
-      
-
-      <main role="main">
-        <div id = "background">
-          <video loop autoplay muted>
-              <source src = "videos/5.mp4" tyoe = "video/mp4">
-          </video>
+          <a class="btn reveal" data-delay="4" href="#projects">View selected work <span class="arrow"><svg class="ico"><use href="#i-right"/></svg></span></a>
         </div>
 
-        <div class="container">
-          <section class="topo-do-site">
-            <div class="interface">
-                <div class="flex">
-                    <div class="txt-topo-site">
-
-                      <h1 style="font-weight: 700;"><span>Hi, I'm Matias Lima!</span></h1>
-                      <div class="scrolling-words-container">
-                        <div class="scrolling-words-box">
-                            <ul>
-                              <li class="word" style="color: #53008a">I'm an Economist</li>
-                              <li class="word" style="color: #ac00a3">I'm a Developer</li>
-                              <li class="word" style="color: #ac0e00">I'm an Economist</li>
-                              <li class="word" style="color: #080074">I'm a researcher</li>
-                              <li class="word" style="color: #006b12">I'm a Creator</li>                                
-                            </ul>
-                        </div>
-                    </div>
-                        <p style="font-weight: bold; color: #bebebece;  font-size: 1.1em;">I am a motivated and versatile individual, deeply immersed in the broad domains of technology and economics, as well as geopolitics, literature, and neuroscience. Navigating the convergence between these areas and seeking the best they have to offer in guiding my path in the world has been a hallmark of my journey. Within this space, I demonstrate unwavering dedication to providing exceptional results, driven by a passionate love for learning. Anchored in a positive mindset and committed to growth, I am ready to make a substantial and impactful contribution, aiming for the achievement of notable accomplishments.
-                        <br><br>
-                        Fone: (11) 99177-3772   |   Email: matiaslima@usp.br | 
-                        <a href="https://www.canva.com/design/DAGe0RzdwRM/ettOXytwYpM_2Nq-40vHwA/view?utm_content=DAGe0RzdwRM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc63d79e4c8" target="_blank" style="color: #bebebece; text-decoration: underline; font-weight: bold;">
-                          Resume
-                        </a>
-                    
-
-                    </div><!--txt-topo-site-->
-  
-                    <div class="img-topo-site">
-                      <img src="images/me_perfil.jpeg" alt="" style="width: 310px; height: 340px;">
-                  </div><!--img-topo-site-->
-                </div><!--flex-->
-            </div><!--interface-->
-
-            <p>
-              <a href="https://github.com/Matias-Lima" class="btn btn-primary my-2"  target="_blank"><i class="fa fa-github"></i>  Matias's Github</a>
-              <a href="https://lattes.cnpq.br/8565875739350362" class="btn btn-primary my-2"  target="_blank"><i class="fa fa-google"></i>  Matias's Lattes</a>
-              <a href="images/resume.png" class="btn btn-primary my-2"  target="_blank"><i class="fa fa-google"></i>  Check Resume</a>
-              <a href="https://www.linkedin.com/in/matias-lima-4a667328a" class="btn btn-primary my-2"  target="_blank"><i class="fa fa-linkedin"></i>  Matias's LinkedIn</a>
-              
-            </p>
-          </section>
+        <div class="hero-figure">
+          <img class="hero-portrait" src="images/hero-portrait.jpg" alt="Portrait of Matias Lima" fetchpriority="high"
+               onerror="if(this.dataset.alt){this.closest('.hero').classList.add('no-portrait')}else{this.dataset.alt=1;this.src=this.src.replace(/\.jpg$/,'.png')}">
         </div>
-                
-        <div class="container">
-          <hr style="border-top: 2px solid #000000;">
-          
-          <h1>Skills</h1>
-          <p class="tech-icons">
-            <a class="btn btn-primary my-2"><img src="assets/Icons/python.png"/> Python </a>
-
-            <a class="btn btn-primary my-2"  target="_blank" return false;><img src="assets/Icons/html.png"/> HTML </a>
-
-            <a class="btn btn-primary my-2"  target="_blank"><img src="assets/Icons/css.png"/> CSS </a>
-            <a  class="btn btn-primary my-2"  target="_blank"><img src="assets/Icons/java.png"/> Java </a>
-            <a  class="btn btn-primary my-2"  target="_blank"><img src="assets/Icons/bootstrap.png"/> Bootstrap </a>
-            <a  class="btn btn-primary my-2"  target="_blank"><img src="assets/Icons/php.svg"/> PHP </a>
-            <a  class="btn btn-primary my-2"  target="_blank"><img src="assets/Icons/tensorflow.png"/> Tensorflow </a>
-            <a  class="btn btn-primary my-2"  target="_blank"><img src="assets/Icons/huggingface.svg"/> Huggingface </a>
-            <a  class="btn btn-primary my-2"  target="_blank"><img src="assets/Icons/streamlit.png"/> Streamlit </a>
-            <a  class="btn btn-primary my-2"  target="_blank"><img src="assets/Icons/R.png"/> R </a>
-
-          </p>
- 
       </div>
 
-        <div class="album py-5" id ="main_blocks">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="card mb-4 shadow-sm">
-                  <img src="assets/about.jpg" class="card-img-top" alt="A moon">
-                  <div class="card-body">
-                    <h3 class="card-title">About Matias</h3>
-                    <p class="card-text">Here you can find a bit more info about me! add text to complete.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <a href="about.html" class="btn btn-primary">About</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="card mb-4 shadow-sm">
-                  <img src="assets/projects.jpg" class="card-img-top" alt="Bits">
-                  <div class="card-body">
-                    <h3 class="card-title">Projects</h3>
-                    <p class="card-text">View some of Matias's projects and course work</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <a href="projects.html" class="btn btn-primary">Projects</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="card mb-4 shadow-sm">
-                  <img src="assets/blog_1.jpg" class="card-img-top" alt="A galaxy">
-                  <div class="card-body">
-                    <h3 class="card-title">Blog Posts</h3>
-                    <p class="card-text">Some more detailed posts about various CS topics</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <a href="blog.html" class="btn btn-primary">Blog</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <div class="container hero-cards">
+        <a class="hcard glass reveal" data-delay="2" href="#projects" data-flow-filter="projects:ai">
+          <div class="hcard-art" data-art="network" data-seed="hero-ai"></div>
+          <div>
+            <div class="hcard-num">01</div>
+            <h3>AI &amp; Engineering</h3>
+            <p>Building intelligent systems, automation and data products.</p>
+          </div>
+          <span class="arrow-btn"><svg class="ico"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="hcard glass reveal" data-delay="3" href="#projects" data-flow-filter="projects:finance">
+          <div class="hcard-art" data-art="chart" data-seed="hero-markets"></div>
+          <div>
+            <div class="hcard-num">02</div>
+            <h3>Economics &amp; Markets</h3>
+            <p>Research, analysis and insights at the intersection of data and the real economy.</p>
+          </div>
+          <span class="arrow-btn"><svg class="ico"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="hcard glass reveal" data-delay="4" href="#projects" data-flow-filter="projects:all">
+          <div class="hcard-art" data-art="rings" data-seed="hero-projects"></div>
+          <div>
+            <div class="hcard-num">03</div>
+            <h3>Selected Projects</h3>
+            <p>A collection of work, from research to real-world applications.</p>
+          </div>
+          <span class="arrow-btn"><svg class="ico"><use href="#i-arrow"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== skills ===== -->
+    <section class="skills" id="skills">
+      <div class="container skills-grid">
+        <div class="skills-title reveal">
+          <h2>Skill</h2>
+          <div class="rule"></div>
+        </div>
+        <ul class="skills-list">
+          <li class="skill reveal" data-delay="1">
+            <svg class="ico"><use href="#i-bars"/></svg>
+            <h3>Data &amp; Analytics</h3>
+            <p>Transforming data into insights.</p>
+          </li>
+          <li class="skill reveal" data-delay="2">
+            <svg class="ico"><use href="#i-trend"/></svg>
+            <h3>Economics &amp; Markets</h3>
+            <p>Markets, fixed income and economic analysis.</p>
+          </li>
+          <li class="skill reveal" data-delay="3">
+            <svg class="ico"><use href="#i-code"/></svg>
+            <h3>Software Engineering</h3>
+            <p>Building tools and scalable systems.</p>
+          </li>
+          <li class="skill reveal" data-delay="4">
+            <svg class="ico"><use href="#i-ai"/></svg>
+            <h3>AI &amp; LLMs</h3>
+            <p>Intelligent systems, agents and applied AI.</p>
+          </li>
+          <li class="skill reveal" data-delay="5">
+            <svg class="ico"><use href="#i-layout"/></svg>
+            <h3>Product &amp; Design</h3>
+            <p>Turning ideas into useful products.</p>
+          </li>
+          <li class="skill reveal" data-delay="6">
+            <svg class="ico"><use href="#i-chat"/></svg>
+            <h3>Communication</h3>
+            <p>Clear thinking and structured ideas.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== studies ===== -->
+    <section class="section section--flow" id="studies">
+      <div class="container">
+        <div class="section-head">
+          <div class="reveal">
+            <span class="eyebrow eyebrow--line">Studies</span>
+            <h2>Reading &amp; <em class="gold">Learning</em></h2>
+            <p class="lead">Challenges, courses, research and university work — the path behind the projects.</p>
+          </div>
+          <a class="btn btn--sm btn--pill reveal" data-delay="1" href="studies.html">
+            <svg class="ico"><use href="#i-grid"/></svg> View all studies <span class="arrow"><svg class="ico"><use href="#i-arrow"/></svg></span>
+          </a>
+        </div>
+
+        <div class="flow" data-flow="studies">
+          <div class="pills reveal" role="group" aria-label="Filter studies"></div>
+          <div class="flow-stage" tabindex="0" aria-label="Studies explorer — use the arrow keys to browse"><noscript><p class="flow-empty">Enable JavaScript to browse the studies, or <a href="studies.html">open the full list</a>.</p></noscript></div>
+          <div class="flow-bar">
+            <button class="flow-btn prev" type="button" aria-label="Previous study"><svg class="ico"><use href="#i-prev"/></svg></button>
+            <div class="flow-now glass" hidden><div class="flow-thumb"></div><div><strong></strong><span></span></div></div>
+            <button class="flow-btn next" type="button" aria-label="Next study"><svg class="ico"><use href="#i-next"/></svg></button>
+          </div>
+          <div class="flow-dots"></div>
+          <div class="flow-count"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== projects ===== -->
+    <section class="section section--flow" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div class="reveal">
+            <span class="eyebrow eyebrow--line">Projects</span>
+            <h2>Selected <em class="gold">Projects</em></h2>
+            <p class="lead">A curated collection of tools, analyses and products built at the intersection of data, markets and technology.</p>
+          </div>
+          <a class="btn btn--sm btn--pill reveal" data-delay="1" href="projects.html">
+            <svg class="ico"><use href="#i-grid"/></svg> View all projects <span class="arrow"><svg class="ico"><use href="#i-arrow"/></svg></span>
+          </a>
+        </div>
+
+        <div class="flow" data-flow="projects">
+          <div class="pills reveal" role="group" aria-label="Filter projects"></div>
+          <div class="flow-stage" tabindex="0" aria-label="Project explorer — use the arrow keys to browse"><noscript><p class="flow-empty">Enable JavaScript to browse the projects, or <a href="projects.html">open the full list</a>.</p></noscript></div>
+          <div class="flow-bar">
+            <button class="flow-btn prev" type="button" aria-label="Previous project"><svg class="ico"><use href="#i-prev"/></svg></button>
+            <div class="flow-now glass" hidden><div class="flow-thumb"></div><div><strong></strong><span></span></div></div>
+            <button class="flow-btn next" type="button" aria-label="Next project"><svg class="ico"><use href="#i-next"/></svg></button>
+          </div>
+          <div class="flow-dots"></div>
+          <div class="flow-count"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== about ===== -->
+    <section class="section about" id="about">
+      <div class="about-glow" aria-hidden="true"></div>
+      <div class="container about-grid">
+        <div class="about-sticky reveal">
+          <span class="eyebrow eyebrow--line">About</span>
+          <h2>Exploring ideas that connect <em class="gold">markets, technology</em> and <em class="gold">people.</em></h2>
+          <p class="about-text">My path runs through economics, technology, data, artificial intelligence and product building. I am interested in understanding how the world works and in building tools that help people make better decisions. This space gathers my trajectory, my interests and what I have been exploring in recent years.</p>
+          <div class="about-loc"><svg class="ico"><use href="#i-pin"/></svg><span>São Paulo, Brazil</span></div>
+        </div>
+
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-img" data-art="skyline" data-seed="tl-markets"></div>
+            <div>
+              <div class="tl-meta"><span>01</span><span class="line"></span></div>
+              <h3>Economics &amp; Markets</h3>
+              <p>Interest and experience in economics, markets and analysis.</p>
             </div>
-          </div>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-img" data-art="candles" data-seed="tl-data"></div>
+            <div>
+              <div class="tl-meta"><span>02</span><span class="line"></span></div>
+              <h3>Data &amp; Analytics</h3>
+              <p>Turning data into analyses, processes and tools.</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-img" data-art="code" data-seed="tl-software"></div>
+            <div>
+              <div class="tl-meta"><span>03</span><span class="line"></span></div>
+              <h3>Software &amp; Building</h3>
+              <p>From analysis to building systems and applications.</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-img" data-art="network" data-seed="tl-ai"></div>
+            <div>
+              <div class="tl-meta"><span>04</span><span class="line"></span></div>
+              <h3>AI &amp; Automation</h3>
+              <p>LLMs, agents, automation and intelligent systems.</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-img" data-art="waves" data-seed="tl-today"></div>
+            <div>
+              <div class="tl-meta"><span>05</span><span class="line"></span><span class="period">Present</span></div>
+              <h3>Today</h3>
+              <p>Economics × Data × Software × AI.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== contact ===== -->
+    <section class="contact" id="contact">
+      <div class="monogram" aria-hidden="true">ML</div>
+      <div class="container">
+        <span class="eyebrow eyebrow--line reveal">Contact</span>
+        <h2 class="reveal" data-delay="1">Have an idea <em class="gold">worth building?</em></h2>
+        <p class="lead reveal" data-delay="2">I am open to conversations about research, products and collaborations where economics, data and AI meet.</p>
+        <div class="contact-links reveal" data-delay="3">
+          <a href="mailto:matiaslima@usp.br"><span class="label">Email</span><span class="val">matiaslima@usp.br <svg class="ico"><use href="#i-arrow"/></svg></span></a>
+          <a href="https://www.linkedin.com/in/matias-lima-4a667328a" target="_blank" rel="noopener"><span class="label">LinkedIn</span><span class="val">matias-lima <svg class="ico"><use href="#i-arrow"/></svg></span></a>
+          <a href="https://github.com/Matias-Lima" target="_blank" rel="noopener"><span class="label">GitHub</span><span class="val">Matias-Lima <svg class="ico"><use href="#i-arrow"/></svg></span></a>
         </div>
-      </main>
+        <a class="btn reveal" data-delay="4" href="mailto:matiaslima@usp.br">Let's talk <span class="arrow"><svg class="ico"><use href="#i-arrow"/></svg></span></a>
+        <p class="contact-more reveal" data-delay="4">Also on <a href="https://lattes.cnpq.br/8565875739350362" target="_blank" rel="noopener">Lattes ↗</a> &nbsp;·&nbsp; <a href="https://www.canva.com/design/DAGe0RzdwRM/ettOXytwYpM_2Nq-40vHwA/view?utm_content=DAGe0RzdwRM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc63d79e4c8" target="_blank" rel="noopener">Résumé ↗</a></p>
+      </div>
+    </section>
+  </main>
 
-      <!--Footer-->
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Matias Lima</span>
+      <span>Economics × Data × Software × AI</span>
+    </div>
+  </footer>
 
-      <footer class="navbar fixed-bottom" id="footer">
-          <span class="footer_text">&copy; 2023 Matias Antonio Lima</span>
-      </footer>
-
-    <!-- Optional Bootstrap JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
