@@ -28,3 +28,9 @@ Unsplash+ (paid) photos were excluded. Files are resized to 1200 px wide.
 | `ifpe.jpg` | [Juanjo Jaramillo](https://unsplash.com/@juanjodev02) | [code editor displaying react source code](https://unsplash.com/photos/code-editor-displaying-react-source-code-mZnx9429i94) |
 | `math-thinking.jpg` | [Vitaly Gariev](https://unsplash.com/@silverkblack) | [Young boy writing complex formulas on a chalkboard](https://unsplash.com/photos/young-boy-writing-complex-formulas-on-a-chalkboard-BpCrX9nwyC0) |
 | `vr-literacy.jpg` | [Minh Pham](https://unsplash.com/@minhphamdesign) | [man in black crew neck t-shirt wearing black sunglasses holding black smartphone](https://unsplash.com/photos/man-in-black-crew-neck-t-shirt-wearing-black-sunglasses-holding-black-smartphone-HI6gy-p-WBI) |
+
+Also from Unsplash, used as the background of the "Today" block in the About section:
+
+| File | Photographer | Photo |
+|---|---|---|
+| `images/about/london.jpg` | [Riccardo Ginevri](https://unsplash.com/@riccardoginevri) | [the city of london is lit up at night](https://unsplash.com/photos/the-city-of-london-is-lit-up-at-night--kwyjfudUbI) |

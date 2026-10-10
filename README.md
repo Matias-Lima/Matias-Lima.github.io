@@ -1,6 +1,6 @@
 # matias-lima.github.io
 
-Personal portfolio — a single page (Hero → Skills → Projects → Studies → About → Contact)
+Personal portfolio — a single page (Hero → Skills → Studies → Projects → About → Contact)
 plus two explorer pages, `projects.html` and `studies.html`. Static HTML/CSS/JS, no build step.
 
 ## Editing content
@@ -23,9 +23,12 @@ Text for the Hero, Skills, About timeline and Contact is directly in `index.html
   front of the background geometry. To swap the portrait, replace the PNG and regenerate both
   files at the same size.
 - `images/hero-bg.jpg` is the Hero background (textured black with the gold geometry on the right).
-- Card thumbnails of your own screenshots live in `assets/thumbs/` (max 900 px wide, JPEG). Original files stay in `assets/`.
+- Card thumbnails of your own screenshots live in `assets/thumbs/` (max 900 px wide, JPEG). The full-size
+  originals, the old pages and the background videos were removed from the repo in October 2026 — they are
+  still in the git history (`git show ef548b9:<path>`), the last commit of the previous site.
 - Stock photos for the more abstract cards live in `assets/photos/` (1200 px wide). They come from Unsplash
   under the Unsplash License; `assets/photos/CREDITS.md` lists the photographer and source of each one.
+- The About section's photos live in `images/about/`.
 
 ## Structure
 
