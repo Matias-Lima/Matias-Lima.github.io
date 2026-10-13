@@ -486,6 +486,8 @@
       initGrid($('.page'), S.PROJECTS || [], S.PROJECT_FILTERS || [], 'projects');
     } else if (page === 'studies') {
       initGrid($('.page'), S.STUDIES || [], S.STUDY_FILTERS || [], 'studies');
+    } else if (page === 'blog') {
+      initGrid($('.page'), S.POSTS || [], S.POST_FILTERS || [{ key: 'all', label: 'All' }], 'posts');
     }
     observeReveals();
   }

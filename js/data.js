@@ -39,6 +39,27 @@ window.SITE = {
     { key: 'university', label: 'University' }
   ],
 
+  /* ---------- Blog (blog.html) — add a post: one object per card, `link` = the post page ---------- */
+  POST_FILTERS: [
+    { key: 'all', label: 'All' },
+    { key: 'economics', label: 'Economics' },
+    { key: 'data', label: 'Data & AI' }
+  ],
+
+  POSTS: [
+    {
+      id: 'post-inadimplencia', title: 'Default rates in Brazil — a topic-modeling reading', cat: 'economics', group: 'Economics', org: 'November 14, 2023', year: 2023,
+      desc: 'What news coverage says about household default in Brazil: topics, their weight over time and what moves them — built with topic modeling on a corpus of articles.',
+      tags: ['NLP', 'Topic Modeling', 'Economics'],
+      image: 'assets/photos/topic-modeling.jpg',
+      link: 'Paginas_projects/topic_modeling_inadimplencia.html',
+      links: [
+        { label: 'Read the post', url: 'Paginas_projects/topic_modeling_inadimplencia.html' },
+        { label: 'Code', url: 'https://github.com/Matias-Lima/Topic-Modeling' }
+      ]
+    }
+  ],
+
   PROJECTS: [
     /* ---------- Finance ---------- */
     {
@@ -53,13 +74,6 @@ window.SITE = {
       tags: ['Python', 'NLP', 'Finance'],
       image: 'assets/photos/datathon.jpg',
       link: 'https://github.com/Matias-Lima/Datathon_2023'
-    },
-    {
-      id: 'volatilidade', title: 'Volatilidade', cat: 'finance', group: 'Applications', year: 2023, featured: true, tagline: 'S&P 500 volatility explorer',
-      desc: 'Graphical interface for the volatility of S&P 500 stocks.',
-      tags: ['Python', 'Streamlit', 'Finance'],
-      image: 'assets/thumbs/projects-finance-volatilidade.jpg',
-      link: 'https://volatilidade-bergmann.streamlit.app'
     },
     {
       id: 'kinea', title: 'Desafio Kinea', cat: 'finance', group: 'Applications', year: 2024,
@@ -78,13 +92,6 @@ window.SITE = {
         { label: 'Live site', url: 'https://factalidade.streamlit.app/' },
         { label: 'Presentation', url: 'https://www.canva.com/design/DAGRkvpkHzI/46HkBGZLYf21ABkEzB9UsQ/view?utm_content=DAGRkvpkHzI&utm_campaign=designshare&utm_medium=link&utm_source=editor' }
       ]
-    },
-    {
-      id: 'dashboard-pinheiros', title: 'Dashboard Financeiro', cat: 'finance', group: 'Data Visualization', year: 2023, featured: true, tagline: 'Financial transparency dashboard',
-      desc: 'Tool to support financial transparency at the Adventist church in Pinheiros.',
-      tags: ['Streamlit', 'Data Viz', 'Python'],
-      image: 'assets/thumbs/projects-visualization-dashboard-pinheiros.jpg',
-      link: 'https://dashboard-adventista-pinheiros.streamlit.app/'
     },
     {
       id: 'technical-indicators', title: 'Technical Indicators', cat: 'finance', group: 'Quantitative Finance · Algorithmic Trading', year: 2023, featured: true, tagline: 'Five classes of indicators',

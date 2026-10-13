@@ -36,6 +36,7 @@ Text for the Hero, Skills, About timeline and Contact is directly in `index.html
 index.html        single page
 projects.html     project explorer (search, sort, filters)
 studies.html      studies explorer
+blog.html         list of posts (POSTS in js/data.js; each post is its own page, e.g. Paginas_projects/)
 css/style.css     design system: black / charcoal, off-white, bronze accent, liquid-glass details
 js/data.js        content
 js/main.js        navigation, reveal animations, coverflow carousel, explorer grids, timeline
